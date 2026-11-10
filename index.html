@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Wavepacket Simulator</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>1D Quantum Tunneling & Wavepacket Simulator</h1>
+            <p>Rigorous Finite Difference Time Domain (FDTD) Simulation</p>
+        </header>
+        
+        <main>
+            <canvas id="simCanvas" width="800" height="400"></canvas>
+            
+            <div class="controls">
+                <div class="control-group">
+                    <label for="barrierWidth">Barrier Width:</label>
+                    <input type="range" id="barrierWidth" min="5" max="50" value="20">
+                </div>
+                <div class="control-group">
+                    <label for="barrierHeight">Barrier Height:</label>
+                    <input type="range" id="barrierHeight" min="0" max="2" step="0.1" value="1.0">
+                </div>
+                <div class="control-group">
+                    <label for="packetMomentum">Initial Momentum (k0):</label>
+                    <input type="range" id="packetMomentum" min="0.5" max="5" step="0.1" value="2.0">
+                </div>
+                <div class="buttons">
+                    <button id="btnReset">Reset Wavepacket</button>
+                    <button id="btnPlayPause">Pause</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/simulator.js"></script>
+</body>
+</html>
